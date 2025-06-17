@@ -20,7 +20,7 @@ const serverResponse = async(title: string)=>{
     body: JSON.stringify({title: title})
   })
   
-  const data = response.json()
+  const data = await response.json()
   return data
 }
 
@@ -75,7 +75,7 @@ const getBooks = async(booksArr: {title: string, description: string}[]): Promis
     const books: book[] = []
     
         for (const book of booksArr){
-            const response = await fetch(`https://openlibrary.org/search.json?q=${book.title}&fields=title,author_name,cover_i,key,&lang=ene&limit=10`)
+            const response = await fetch(`https://openlibrary.org/search.json?q=${encodeURIComponent(book.title)}&fields=title,author_name,cover_i,key,&lang=ene&limit=10`)
 
             if (response.status != 200){
                 throw new Error(`Something went wrong with api request. Status code ${response.status}`)
