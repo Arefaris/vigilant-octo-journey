@@ -86,7 +86,7 @@ const getBooks = async(booksArr: {title: string, description: string}[]): Promis
             
             const b: book = {
             author_name: data.docs[0].author_name,
-            img_url: data.docs[0].cover_i ? `https://covers.openlibrary.org/b/id/${data.docs[0].cover_i}-L.jpg` : "./no-image.png",
+            img_url: data.docs[0].cover_i ? `https://covers.openlibrary.org/b/id/${data.docs[0].cover_i}-L.jpg` : "no-image.png",
             open_library_url: `https://openlibrary.org${data.docs[0].key}`,
             title: data.docs[0].title,
             description: book.description
