@@ -61,7 +61,7 @@ a {
     align-items: center;
     height: 100%;
     width: 400px;
-   
+
 }
 
 .book p {
@@ -154,6 +154,10 @@ button:focus,input:focus {
 @media screen and (max-width: 800px) {
   .book-grid { 
     grid-template-columns: 1fr;
+  }
+
+  .book {
+    width: 300px;
   }
 }
 
