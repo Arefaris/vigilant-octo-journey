@@ -24,7 +24,17 @@ const serverResponse = async(title: string)=>{
   return data
 }
 
-searchBtn.addEventListener("click", async ()=>{
+searchBtn.addEventListener("click", async()=>{
+    fetchBooks()
+})
+
+userInput.addEventListener("keyup", async(event)=>{
+    if (event.key === "Enter"){
+        fetchBooks()
+    }
+})
+
+const fetchBooks = async()=>{
     try {
         const userQ: string = userInput.value
         if (userQ === "") throw new Error("bad value")
@@ -39,8 +49,9 @@ searchBtn.addEventListener("click", async ()=>{
     }catch (e){
         console.log(e)
     }
-    
-})
+
+}
+
 
 
 const renderBooks = (books: book[])=>{
