@@ -11,12 +11,12 @@ body {
     font-variation-settings:
         "wdth" 100;
     box-sizing: border-box;
-    color: #f1faee;
-    text-shadow: 1px 1px 1px black;
+    color: #161616;
     line-height: 1.4;
     word-wrap: break-word;
     text-rendering: optimizeLegibility;
     text-align: center;
+    background-color: #eef0ea;
 }
 
 a {
@@ -40,8 +40,8 @@ a {
     flex-direction: column;
     min-height: 100vh;
     min-width: 100vw;
-    background: #EEAECA;
-    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    
+    
 }
 
 .img-container {
@@ -101,7 +101,7 @@ h1 {
 button, input {
     color: #fff;
     color: var(--form-text);
-    background-color: #161f27;
+    background-color: white;
     font-family: inherit;
     font-size: inherit;
     margin-right: 6px;
@@ -119,11 +119,11 @@ button {
 }
 
 button:hover {
-    background: #040a0f
+    background: lightgray
 }
 
 button:focus,input:focus {
-    box-shadow: 0 0 0 2px rgba(0,150,191,.67);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.67);
 }
 
 
@@ -148,7 +148,7 @@ button:focus,input:focus {
 }
 
 #recommender-title {
-    color: #780000;
+    color: #f16e6e;
 }
 
 @media screen and (max-width: 800px) {
