@@ -12,7 +12,7 @@ interface book {
 }
 
 const serverResponse = async(title: string)=>{ 
-  const response = await fetch("http://95.179.255.29:8547/api", {
+  const response = await fetch("https://your-next-book-server.onrender.com/api", {
     method: "POST",
     headers: {
     'Content-Type': 'application/json'
